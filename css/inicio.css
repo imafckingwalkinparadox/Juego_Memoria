@@ -1,50 +1,79 @@
-.inicio-container {
-  text-align: center;
-  padding: 4rem 2rem;
-  background: linear-gradient(to right, #a1c4fd, #c2e9fb);
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Orbitron', sans-serif;
+  background: radial-gradient(circle at top left, #1e003c, #0c0018);
+  color: white;
   min-height: 100vh;
-  font-family: 'Segoe UI', sans-serif;
+  overflow: hidden;
 }
 
-.inicio-container h1 {
+.pantalla-principal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(145deg, #0f001f 0%, #1a002b 100%);
+  padding: 2rem;
+  position: relative;
+}
+
+.marco-juegos {
+  background: #140021;
+  border: 3px solid #00ffff;
+  box-shadow: 0 0 20px #00ffff, 0 0 40px #ff00ff inset;
+  border-radius: 20px;
+  padding: 3rem;
+  max-width: 900px;
+  width: 100%;
+  text-align: center;
+  position: relative;
+}
+
+.titulo-juegos {
   font-size: 3rem;
-  color: #333;
-  margin-bottom: 3rem;
+  color: #00ffff;
+  text-shadow: 0 0 10px #00ffff, 0 0 20px #ff00ff;
+  margin-bottom: 1rem;
+}
+
+.subtitulo {
+  font-size: 1.2rem;
+  color: #aaa;
+  margin-bottom: 2.5rem;
 }
 
 .grid-juegos {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 2.5rem;
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 2rem;
 }
 
 .juego-card {
-  background: white;
-  padding: 3rem 1.5rem;
-  border-radius: 1.5rem;
-  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2);
-  transition: transform 0.2s ease, background-color 0.3s;
+  background: #260040;
+  border: 2px solid #ff00ff;
+  border-radius: 12px;
+  padding: 1.5rem;
   cursor: pointer;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1.5rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 0 12px #ff00ff66;
 }
 
-.juego-card h2 {
-  margin: 0;
-  font-size: 1.8rem;
-  color: #333;
+.juego-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px #ff00ffbb, 0 0 30px #00ffffaa;
 }
 
 .juego-icono {
   font-size: 2.5rem;
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #ff00ff;
+  text-shadow: 0 0 5px #ff00ff;
 }
 
-.juego-card:hover {
-  transform: translateY(-6px) scale(1.05);
-  background-color: #e6f9ff;
+.juego-card h2 {
+  margin: 0;
+  font-size: 1.2rem;
+  color: #ffffff;
 }

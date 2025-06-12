@@ -1,23 +1,27 @@
-// inicio.js
-import { iniciarJuegoMemoria } from "./juego1.js";
-
 export function crearPantallaInicio() {
   const contenedor = document.createElement("div");
-  contenedor.className = "inicio-container";
+  contenedor.className = "pantalla-principal";
+
+  const marco = document.createElement("div");
+  marco.className = "marco-juegos";
 
   const titulo = document.createElement("h1");
-  titulo.textContent = "🎮 Elige un juego";
-  contenedor.appendChild(titulo);
+  titulo.className = "titulo-juegos";
+  titulo.textContent = "🎮 GAME NIGHT";
 
-  const juegos = [
-    { nombre: "Juego 1", id: "juego1" },
-    { nombre: "Juego 2", id: "juego2" },
-    { nombre: "Juego 3", id: "juego3" },
-    { nombre: "Juego 4", id: "juego4" }
-  ];
+  const sub = document.createElement("p");
+  sub.className = "subtitulo";
+  sub.textContent = "Selecciona tu misión para empezar...";
 
   const grid = document.createElement("div");
   grid.className = "grid-juegos";
+
+  const juegos = [
+    { nombre: "Misión 1", id: "juego1" },
+    { nombre: "Misión 2", id: "juego2" },
+    { nombre: "Misión 3", id: "juego3" },
+    { nombre: "Misión 4", id: "juego4" }
+  ];
 
   juegos.forEach(juego => {
     const card = document.createElement("div");
@@ -34,7 +38,6 @@ export function crearPantallaInicio() {
     card.appendChild(icono);
     card.appendChild(nombre);
 
-    // Solo activa el juego 1 por ahora
     if (juego.id === "juego1") {
       card.addEventListener("click", () => {
         const contenido = document.querySelector(".contenido");
@@ -42,11 +45,14 @@ export function crearPantallaInicio() {
         contenido.appendChild(iniciarJuegoMemoria());
       });
     }
-    
 
     grid.appendChild(card);
   });
 
-  contenedor.appendChild(grid);
+  marco.appendChild(titulo);
+  marco.appendChild(sub);
+  marco.appendChild(grid);
+  contenedor.appendChild(marco);
+
   return contenedor;
 }
