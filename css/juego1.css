@@ -1,0 +1,48 @@
+.juego-memoria {
+    text-align: center;
+    padding: 2rem;
+  }
+  
+  .tablero {
+    display: grid;
+    grid-template-columns: repeat(4, 80px);
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 1rem;
+  }
+  
+  .carta {
+    width: 80px;
+    height: 80px;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.5s;
+    cursor: pointer;
+  }
+  
+  .carta .frente,
+  .carta .dorso {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backface-visibility: hidden;
+    border-radius: 10px;
+  }
+  
+  .carta .dorso {
+    background: #bbb;
+  }
+  
+  .carta .frente {
+    background: #6cf;
+    transform: rotateY(180deg);
+  }
+  
+  .carta.descubierta {
+    transform: rotateY(180deg);
+  }
+  

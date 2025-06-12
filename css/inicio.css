@@ -1,0 +1,50 @@
+.inicio-container {
+  text-align: center;
+  padding: 4rem 2rem;
+  background: linear-gradient(to right, #a1c4fd, #c2e9fb);
+  min-height: 100vh;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.inicio-container h1 {
+  font-size: 3rem;
+  color: #333;
+  margin-bottom: 3rem;
+}
+
+.grid-juegos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2.5rem;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.juego-card {
+  background: white;
+  padding: 3rem 1.5rem;
+  border-radius: 1.5rem;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease, background-color 0.3s;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.juego-card h2 {
+  margin: 0;
+  font-size: 1.8rem;
+  color: #333;
+}
+
+.juego-icono {
+  font-size: 2.5rem;
+}
+
+.juego-card:hover {
+  transform: translateY(-6px) scale(1.05);
+  background-color: #e6f9ff;
+}
