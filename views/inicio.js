@@ -1,3 +1,5 @@
+import { iniciarJuegoMemoria } from "./juego1.js";
+
 export function crearPantallaInicio() {
   const contenedor = document.createElement("div");
   contenedor.className = "pantalla-principal";

@@ -7,7 +7,7 @@ export function crearHeader(onInicioClick) {
   titulo.textContent = "Mi App de Juegos";
 
   const btnInicio = document.createElement("button");
-  btnInicio.textContent = "🏠 Inicio";
+  btnInicio.textContent = "Inicio";
   btnInicio.className = "btn-inicio";
   btnInicio.addEventListener("click", onInicioClick);
 
