@@ -1,3 +1,4 @@
+import { crearHeader } from "./header.js";
 import { iniciarJuegoMemoria } from "./juego1.js";
 import { crearSalaDeEspera } from "./espera.js";
 
@@ -44,7 +45,19 @@ export function crearPantallaInicio() {
     card.addEventListener("click", () => {
       const contenido = document.querySelector(".contenido");
       contenido.innerHTML = "";
+
+      // Crear el header y agregarlo
+      const header = crearHeader(() => {
+        const nuevaPantallaInicio = crearPantallaInicio();
+        contenido.innerHTML = "";
+        contenido.appendChild(header);
+        contenido.appendChild(nuevaPantallaInicio);
+      });
+
+      // Crear la sala de espera
       const salaEspera = crearSalaDeEspera(juego.nombre, juego.fn);
+
+      // Agregar header y sala al DOM
       contenido.appendChild(salaEspera);
     });
 
