@@ -2,6 +2,11 @@ import { crearHeader } from "./header.js";
 import { iniciarJuegoMemoria } from "./juego1.js";
 import { crearSalaDeEspera } from "./espera.js";
 
+//juego de mac
+import { crearEncabezado } from "./juego2/encabezado.js";
+import { crearJuego } from "./juego2/juego.js";
+import { crearTablaResultados } from "./juego2/resultado.js";
+
 export function crearPantallaInicio() {
   const contenedor = document.createElement("div");
   contenedor.className = "pantalla-principal";
@@ -60,6 +65,16 @@ export function crearPantallaInicio() {
       // Agregar header y sala al DOM
       contenido.appendChild(salaEspera);
     });
+
+    if (juego.id === "juego2") {
+  card.addEventListener("click", () => {
+    const contenido = document.querySelector(".contenido");
+    contenido.innerHTML = "";
+    contenido.appendChild(crearEncabezado());
+    contenido.appendChild(crearJuego());
+    contenido.appendChild(crearTablaResultados())
+  });
+}
 
     grid.appendChild(card);
   });
