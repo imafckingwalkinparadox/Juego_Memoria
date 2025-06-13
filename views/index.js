@@ -9,7 +9,7 @@ root.className = "principal";
 const app = document.createElement("div");
 app.className = "app-container";
 
-// Función para cargar el inicio
+// Función para cargar el inicioviews/index.js
 function cargarInicio() {
   const contenido = document.querySelector(".contenido");
   contenido.innerHTML = "";
