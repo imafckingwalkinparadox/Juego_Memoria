@@ -299,7 +299,7 @@ document.addEventListener('DOMContentLoaded', function () {
       document.getElementById('juego').style.display = 'block';
       iniciarJuego();
     } else {
-      alert('Por favor, ingresa el código.');
+      alert('Ingresa el codigo.');
     }
   };
 });
